@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { useTranslation } from "@/hooks/use-translation"
-import { useLanguage } from "@/contexts/language-context"
+import type React from "react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslation } from "@/hooks/use-translation";
+import { useAppSelector } from "@/store/hooks";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -16,17 +16,17 @@ export function ContactForm() {
     phone: "",
     subject: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
-  const { t } = useTranslation()
-  const { isRTL } = useLanguage()
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const { t } = useTranslation();
+  const isRTL = useAppSelector((state) => state.language.isRTL);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setError("")
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -35,35 +35,47 @@ export function ContactForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
-      const result = await response.json()
+      const result = await response.json();
 
       if (result.success) {
-        setIsSubmitted(true)
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-        setTimeout(() => setIsSubmitted(false), 3000)
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setTimeout(() => setIsSubmitted(false), 3000);
       } else {
-        setError(result.message || "Failed to send message")
+        setError(result.message || "Failed to send message");
       }
     } catch (error) {
-      setError("Failed to send message. Please try again.")
+      setError("Failed to send message. Please try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle className={`text-xl font-semibold text-gray-900 ${isRTL ? "text-right" : "text-left"}`}>
+        <CardTitle
+          className={`text-xl font-semibold text-gray-900 ${
+            isRTL ? "text-right" : "text-left"
+          }`}
+        >
           {t("sendMessage")}
         </CardTitle>
       </CardHeader>
@@ -73,7 +85,9 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="name"
-                className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? "text-right" : "text-left"}`}
+                className={`block text-sm font-medium text-gray-700 mb-1 ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
               >
                 {t("fullName")} *
               </label>
@@ -91,7 +105,9 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="email"
-                className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? "text-right" : "text-left"}`}
+                className={`block text-sm font-medium text-gray-700 mb-1 ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
               >
                 {t("emailAddress")} *
               </label>
@@ -112,7 +128,9 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="phone"
-                className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? "text-right" : "text-left"}`}
+                className={`block text-sm font-medium text-gray-700 mb-1 ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
               >
                 {t("phoneNumber")}
               </label>
@@ -129,7 +147,9 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="subject"
-                className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? "text-right" : "text-left"}`}
+                className={`block text-sm font-medium text-gray-700 mb-1 ${
+                  isRTL ? "text-right" : "text-left"
+                }`}
               >
                 {t("subject")} *
               </label>
@@ -149,7 +169,9 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? "text-right" : "text-left"}`}
+              className={`block text-sm font-medium text-gray-700 mb-1 ${
+                isRTL ? "text-right" : "text-left"
+              }`}
             >
               {t("message")} *
             </label>
@@ -165,13 +187,21 @@ export function ContactForm() {
             />
           </div>
 
-          <Button type="submit" className="w-full bg-amber-900 hover:bg-amber-800 text-white" disabled={isSubmitting}>
-            {isSubmitting ? t("sending") : isSubmitted ? t("messageSent") : t("sendMessage")}
+          <Button
+            type="submit"
+            className="w-full bg-amber-900 hover:bg-amber-800 text-white"
+            disabled={isSubmitting}
+          >
+            {isSubmitting
+              ? t("sending")
+              : isSubmitted
+              ? t("messageSent")
+              : t("sendMessage")}
           </Button>
 
           {error && <p className="text-red-600 text-sm text-center">{error}</p>}
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

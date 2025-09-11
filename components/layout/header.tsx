@@ -12,13 +12,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { LanguageToggle } from "@/components/ui/language-toggle";
 import { useTranslation } from "@/hooks/use-translation";
-import { useLanguage } from "@/contexts/language-context";
+
+import { useAppSelector } from "@/store/hooks";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const isRTL = useAppSelector((state) => state.language.isRTL);
 
   const services = [
     { key: "legalConsultation", slug: "legal-consultation-services" },
@@ -47,7 +48,6 @@ export function Header() {
               isRTL ? "space-x-reverse" : ""
             }`}
           >
-            
             <span className="font-bold text-lg">Law Firm</span>
           </Link>
 
@@ -129,14 +129,14 @@ export function Header() {
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="text-white hover:bg-amber-800"
             >
-              <Search className="w-4 h-4" />
+              <Search className="w-5 h-5" />
             </Button>
 
             {/* Book Appointment */}
             <Button
               variant="outline"
               size="sm"
-              className="hidden md:inline-flex border-white text-white hover:bg-white hover:text-amber-900 bg-transparent"
+              className="hidden px-2 py-4 md:inline-flex border-white text-white hover:bg-white hover:text-amber-900 bg-transparent"
             >
               {t("bookAppointment")}
             </Button>

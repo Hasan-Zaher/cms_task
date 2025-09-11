@@ -5,13 +5,13 @@ import { ChevronLeft, ChevronRight, MessageCircle, Phone, Mail } from "lucide-re
 import { Button } from "@/components/ui/button"
 import { useTeamMembers } from "@/hooks/use-strapi-data"
 import { useTranslation } from "@/hooks/use-translation"
-import { useLanguage } from "@/contexts/language-context"
+import { useAppSelector } from "@/store/hooks";
 
 export function TeamSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const { teamMembers, loading } = useTeamMembers()
   const { t } = useTranslation()
-  const { isRTL } = useLanguage()
+ const isRTL = useAppSelector((state) => state.language.isRTL);
   const itemsPerPage = 3
 
   const nextSlide = () => {

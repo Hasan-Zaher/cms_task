@@ -1,10 +1,11 @@
-"use client"
+'use client'
 
-import { useLanguage } from "@/contexts/language-context"
-import { getTranslation, type Translations } from "@/lib/i18n"
+import { useAppSelector } from '@/store/hooks'      
+import { getTranslation, type Translations } from '@/lib/i18n'
 
 export function useTranslation() {
-  const { locale } = useLanguage()
+  // get locale from Redux instead of the old context
+  const locale = useAppSelector((state) => state.language.locale)
 
   const t = (key: keyof Translations): string => {
     return getTranslation(locale, key)

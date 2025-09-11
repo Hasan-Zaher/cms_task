@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/use-translation";
-import { useLanguage } from "@/contexts/language-context";
+import { useAppSelector } from "@/store/hooks";
 import Image from "next/image";
 
 const heroSlides = [
@@ -31,7 +31,7 @@ const heroSlides = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+ const isRTL = useAppSelector((state) => state.language.isRTL);
 
   useEffect(() => {
     const timer = setInterval(() => {

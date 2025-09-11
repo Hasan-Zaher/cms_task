@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import { strapiAPI } from "@/lib/strapi"
 import { useTranslation } from "@/hooks/use-translation"
-import { useLanguage } from "@/contexts/language-context"
+import { useAppSelector } from "@/store/hooks";
 
 export function Footer() {
   const [email, setEmail] = useState("")
@@ -17,7 +17,8 @@ export function Footer() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const { t } = useTranslation()
-  const { isRTL } = useLanguage()
+
+ const isRTL = useAppSelector((state) => state.language.isRTL);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
