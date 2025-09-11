@@ -3,6 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+ 
+
+@theme {
+  --color-main: #643F2E;
+  --color-green: #388E3C;
+  --color-red: #D32F2F;
+  --color-yellow: #FFC107;
+  --color-black: #000;
+}
+
+
 :root {
   --background: oklch(0.98 0.01 85);
   --foreground: oklch(0.2 0.02 85);

@@ -1,19 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Search, Menu, X, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { LanguageToggle } from "@/components/ui/language-toggle"
-import { useTranslation } from "@/hooks/use-translation"
-import { useLanguage } from "@/contexts/language-context"
+import { useState } from "react";
+import Link from "next/link";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { LanguageToggle } from "@/components/ui/language-toggle";
+import { useTranslation } from "@/hooks/use-translation";
+import { useLanguage } from "@/contexts/language-context";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const { t } = useTranslation()
-  const { isRTL } = useLanguage()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
 
   const services = [
     { key: "legalConsultation", slug: "legal-consultation-services" },
@@ -25,59 +30,93 @@ export function Header() {
     { key: "corporateGovernance", slug: "corporate-governance-services" },
     { key: "companiesLiquidation", slug: "companies-liquidation" },
     { key: "internalRegulations", slug: "internal-regulations-for-companies" },
-  ]
+  ];
 
   return (
-    <header className="bg-amber-900 text-white sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className={`flex items-center justify-between h-16 ${isRTL ? "flex-row-reverse" : ""}`}>
+    <header className=" text-white absolute left-0 right-0 top-0 z-50">
+      <div className="container mx-auto px-0 py-3">
+        <div
+          className={`flex items-center justify-between h-16 ${
+            isRTL ? "flex-row-reverse" : ""
+          }`}
+        >
           {/* Logo */}
-          <Link href="/" className={`flex items-center space-x-2 ${isRTL ? "space-x-reverse" : ""}`}>
-            <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-              <span className="text-amber-900 font-bold text-sm">LF</span>
-            </div>
+          <Link
+            href="/"
+            className={`flex items-center space-x-2 ${
+              isRTL ? "space-x-reverse" : ""
+            }`}
+          >
+            
             <span className="font-bold text-lg">Law Firm</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className={`hidden md:flex items-center space-x-8 ${isRTL ? "space-x-reverse" : ""}`}>
+          <nav
+            className={`hidden md:flex items-center space-x-8 ${
+              isRTL ? "space-x-reverse" : ""
+            }`}
+          >
             <Link href="/" className="hover:text-amber-200 transition-colors">
               {t("home")}
             </Link>
-            <Link href="/about" className="hover:text-amber-200 transition-colors">
+            <Link
+              href="/about"
+              className="hover:text-amber-200 transition-colors"
+            >
               {t("about")}
             </Link>
 
             {/* Services Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`flex items-center space-x-1 hover:text-amber-200 transition-colors ${isRTL ? "space-x-reverse" : ""}`}
+                className={`flex items-center space-x-1 hover:text-amber-200 transition-colors ${
+                  isRTL ? "space-x-reverse" : ""
+                }`}
               >
                 <span>{t("services")}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-amber-900 border-amber-800 text-white min-w-[300px]">
                 {services.map((service) => (
-                  <DropdownMenuItem key={service.key} className="hover:bg-amber-800 focus:bg-amber-800">
-                    <Link href={`/services/${service.slug}`}>{t(service.key as keyof typeof t)}</Link>
+                  <DropdownMenuItem
+                    key={service.key}
+                    className="hover:bg-amber-800 focus:bg-amber-800"
+                  >
+                    <Link href={`/services/${service.slug}`}>
+                      {t(service.key as keyof typeof t)}
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link href="/blog" className="hover:text-amber-200 transition-colors">
+            <Link
+              href="/blog"
+              className="hover:text-amber-200 transition-colors"
+            >
               {t("blog")}
             </Link>
-            <Link href="/team" className="hover:text-amber-200 transition-colors">
+            <Link
+              href="/team"
+              className="hover:text-amber-200 transition-colors"
+            >
               {t("team")}
             </Link>
-            <Link href="/contact" className="hover:text-amber-200 transition-colors">
+            <Link
+              href="/contact"
+              className="hover:text-amber-200 transition-colors"
+            >
               {t("contact")}
             </Link>
           </nav>
 
           {/* Right side actions */}
-          <div className={`flex items-center space-x-4 ${isRTL ? "space-x-reverse" : ""}`}>
+          <div
+            className={`flex items-center space-x-4 ${
+              isRTL ? "space-x-reverse" : ""
+            }`}
+          >
             {/* Language Toggle */}
             <div className="hidden md:flex">
               <LanguageToggle />
@@ -109,7 +148,11 @@ export function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-white hover:bg-amber-800"
             >
-              {isMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              {isMenuOpen ? (
+                <X className="w-4 h-4" />
+              ) : (
+                <Menu className="w-4 h-4" />
+              )}
             </Button>
           </div>
         </div>
@@ -163,5 +206,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

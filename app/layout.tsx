@@ -6,6 +6,8 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
+// import '../styles/tailwind.css';
+
 
 export const metadata: Metadata = {
   title: "Law Firm - Professional Legal Services",
