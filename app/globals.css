@@ -7,9 +7,10 @@
 
 @theme {
   --color-main: #643F2E;
-  --color-green: #388E3C;
-  --color-red: #D32F2F;
-  --color-yellow: #FFC107;
+  --color-brown: #4b2615;
+  --color-faint: #5d3c2c;
+  --color-mainHover: #FCD34D;
+  --color-yellow: #FFC107; 
   --color-black: #000;
 }
 

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useTestimonials } from "@/hooks/use-strapi-data";
 import { useTranslation } from "@/hooks/use-translation";
 import { useAppSelector } from "@/store/hooks";
+import Image from "next/image";
 
 export function ClientsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -25,7 +26,7 @@ export function ClientsSection() {
 
   if (loading) {
     return (
-      <section className="py-16 bg-amber-900 text-white">
+      <section className="py-16 bg-brown text-white">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <div className="h-8 bg-amber-800 rounded w-64 mb-4 animate-pulse"></div>
@@ -51,60 +52,66 @@ export function ClientsSection() {
   const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
-    <section className="py-16 bg-amber-900 text-white">
+    <section className="py-16 bg-brown text-white  ">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t("clientsTitle")}
           </h2>
-          <p className="text-amber-100 max-w-2xl text-pretty">
-            {t("clientsDescription")}
-          </p>
+          <p className=" max-w-2xl opacity-[0.6]">{t("clientsDescription")}</p>
         </div>
 
         {/* Testimonial */}
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-            isRTL ? "lg:grid-flow-col-dense" : ""
+          className={`flex flex-col lg:flex-row items-center ${
+            isRTL ? "lg:flex-row-reverse" : ""
           }`}
         >
-          {/* Client Image */}
+          {/* Image */}
           <div
             className={`flex justify-center ${
-              isRTL ? "lg:justify-end lg:col-start-2" : "lg:justify-start"
+              isRTL ? "lg:justify-end" : "lg:justify-start"
             }`}
           >
-            <div className="relative">
-              <img
+            <div className="relative my-10 md:my-0">
+              <Image
                 src={
                   currentTestimonialData.image ||
                   "/placeholder.svg?height=400&width=320&query=professional headshot"
                 }
                 alt={currentTestimonialData.name}
-                className="w-80 h-96 object-cover rounded-lg shadow-2xl"
+                width={100}
+                height={100}
+                className=" w-100 md:min-w-120 h-100  object-cover  shadow-2xl  "
               />
             </div>
           </div>
 
-          {/* Testimonial Content */}
+          {/* Content */}
           <div
-            className={`space-y-6 ${
-              isRTL ? "lg:col-start-1 text-right" : "text-left"
-            }`}
+            className={` space-y-6 px-6 ${isRTL ? "text-right" : "text-left"}`}
           >
-            <blockquote className="text-lg md:text-xl leading-relaxed text-pretty">
-              "{currentTestimonialData.testimonial}"
+            <blockquote className="text-lg md:text-xl leading-relaxed opacity-[0.6]">
+              "
+              {isRTL
+                ? currentTestimonialData.testimonialAr
+                : currentTestimonialData.testimonial}
+              "
             </blockquote>
-
             <div>
               <h4 className="text-xl font-semibold">
-                {currentTestimonialData.name}
+                {isRTL
+                  ? currentTestimonialData.nameAr
+                  : currentTestimonialData.name}
               </h4>
-              <p className="text-amber-200">
-                {currentTestimonialData.position}
-                {currentTestimonialData.company &&
-                  `, ${currentTestimonialData.company}`}
+              <p className="mt-5">
+                {isRTL
+                  ? currentTestimonialData.positionAr
+                  : currentTestimonialData.position}
+                {isRTL
+                  ? `, ${currentTestimonialData.companyAr}`
+                  : `, ${currentTestimonialData.company}`}
               </p>
             </div>
           </div>
@@ -112,12 +119,12 @@ export function ClientsSection() {
 
         {/* Navigation */}
         {testimonials.length > 1 && (
-          <div className="flex justify-center mt-12 space-x-4">
+          <div className="flex justify-end mt-12 space-x-4">
             <Button
               variant="ghost"
               size="sm"
               onClick={prevTestimonial}
-              className="bg-amber-800 hover:bg-amber-700 text-white w-10 h-10 p-0 rounded-full"
+              className="bg-white shadow-lg   hover:bg-faint  hover:shadow-xl text-black  cursor-pointer  w-10 h-10 p-0 rounded-full"
             >
               {isRTL ? (
                 <ChevronRight className="w-5 h-5" />
@@ -129,7 +136,7 @@ export function ClientsSection() {
               variant="ghost"
               size="sm"
               onClick={nextTestimonial}
-              className="bg-amber-800 hover:bg-amber-700 text-white w-10 h-10 p-0 rounded-full"
+              className=" bg-white shadow-lg    hover:bg-faint  hover:shadow-xl text-black  cursor-pointer  w-10 h-10 p-0 rounded-full"
             >
               {isRTL ? (
                 <ChevronLeft className="w-5 h-5" />

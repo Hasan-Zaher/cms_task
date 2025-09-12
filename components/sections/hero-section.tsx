@@ -10,8 +10,8 @@ import Image from "next/image";
 const heroSlides = [
   {
     id: 1,
-    titleKey: "heroTitle",
-    descriptionKey: "heroDescription",
+    titleKey: "heroTitle1",
+    descriptionKey: "heroDescription1",
     backgroundImage:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
     profileImage:
@@ -19,8 +19,8 @@ const heroSlides = [
   },
   {
     id: 2,
-    titleKey: "heroTitle",
-    descriptionKey: "heroDescription",
+    titleKey: "heroTitle2",
+    descriptionKey: "heroDescription2",
     backgroundImage:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
     profileImage:
@@ -56,8 +56,9 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
         style={{
-          backgroundImage: "url('/images/heroImage.jpg')",
-          filter: "sepia(20%) saturate(80%) brightness(60%)",
+          backgroundImage:
+            "linear-gradient(rgba(165, 42, 42, 0.4), rgba(165, 42, 42, 0.4)), url('/images/heroImage.jpg')",
+          filter: "sepia(20%) saturate(100%) brightness(100%)",
         }}
       >
         <div
@@ -68,10 +69,13 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+      <div
+        className="relative z-10   container mx-auto px-4 h-full flex items-center"
+        dir={isRTL ? "ltr" : ""}
+      >
         <div
           className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full ${
-            isRTL ? "text-right" : "text-left"
+            isRTL ? "text-right   " : "text-left"
           }`}
         >
           {/* Left Content */}

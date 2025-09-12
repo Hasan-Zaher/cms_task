@@ -1,73 +1,73 @@
-export type Locale = "en" | "ar"
+export type Locale = "en" | "ar";
 
-export const locales: Locale[] = ["en", "ar"]
-export const defaultLocale: Locale = "en"
+export const locales: Locale[] = ["en", "ar"];
+export const defaultLocale: Locale = "en";
 
 export interface Translations {
   // Navigation
-  home: string
-  about: string
-  services: string
-  blog: string
-  team: string
-  contact: string
-  bookAppointment: string
+  home: string;
+  about: string;
+  services: string;
+  blog: string;
+  team: string;
+  contact: string;
+  bookAppointment: string;
 
   // Hero Section
-  heroTitle: string
-  heroDescription: string
-  readMore: string
+  heroTitle1: string;
+  heroDescription1: string;
+  heroTitle2: string;
+  heroDescription2: string;
+  readMore: string;
 
   // Team Section
-  ourTeam: string
-  teamDescription: string
+  ourTeam: string;
+  teamDescription: string;
 
   // Client Section
-  clientsTitle: string
-  clientsDescription: string
+  clientsTitle: string;
+  clientsDescription: string;
 
   // Footer
-  quickLinks: string
-  ourStrategy: string
-  ourAdvantages: string
-  socialResponsibility: string
-  ourServices: string
-  newsletter: string
-  newsletterDescription: string
-  subscribe: string
-  subscribed: string
-  allRightsReserved: string
+
+  ourStrategy: string;
+  ourAdvantages: string;
+  socialResponsibility: string;
+  ourServices: string;
+  subscribe: string;
+  subscribed: string;
+  allRightsReserved: string;
 
   // Services
-  legalConsultation: string
-  foreignInvestment: string
-  contracts: string
-  notarization: string
-  allCases: string
-  insurance: string
-  banksFinancial: string
-  corporateGovernance: string
-  companiesLiquidation: string
-  internalRegulations: string
+  legalConsultation: string;
+  foreignInvestment: string;
+  contracts: string;
+  notarization: string;
+  allCases: string;
+  insurance: string;
+  banksFinancial: string;
+  corporateGovernance: string;
+  companiesLiquidation: string;
+  internalRegulations: string;
 
   // Contact
-  contactUs: string
-  getInTouch: string
-  email: string
-  phone: string
-  address: string
-  officeHours: string
-  sendMessage: string
-  fullName: string
-  emailAddress: string
-  phoneNumber: string
-  subject: string
-  message: string
-  sending: string
-  messageSent: string
+  contactUs: string;
+  getInTouch: string;
+  email: string;
+  phone: string;
+  address: string;
+  officeHours: string;
+  sendMessage: string;
+  fullName: string;
+  emailAddress: string;
+  phoneNumber: string;
+  subject: string;
+  message: string;
+  sending: string;
+  messageSent: string;
 
   // Search
-  searchPlaceholder: string
+  searchPlaceholder: string;
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -82,10 +82,13 @@ export const translations: Record<Locale, Translations> = {
     bookAppointment: "Book Appointment",
 
     // Hero Section
-    heroTitle: "Lorem Ipsum",
-    heroDescription:
+    heroTitle1: "Lorem Ipsum",
+    heroTitle2: "Another Headline",
+    heroDescription1:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     readMore: "Read More",
+    heroDescription2:
+      "This is tting  printing and typesetting industry. Lorem Ipsum has been the i description for the second slide",
 
     // Team Section
     ourTeam: "Our Team",
@@ -98,13 +101,11 @@ export const translations: Record<Locale, Translations> = {
       "Our clients range from individual investors to local international as well as fortune 500 companies. Our clients range from individual investors to local international as well as fortune 500 companies.",
 
     // Footer
-    quickLinks: "Quick Links",
+
     ourStrategy: "Our Strategy",
     ourAdvantages: "Our Advantages",
     socialResponsibility: "Social Responsibility",
     ourServices: "Our Services",
-    newsletter: "Newsletter",
-    newsletterDescription: "Subscribe to get updates on legal insights and firm news.",
     subscribe: "Subscribe",
     subscribed: "Subscribed!",
     allRightsReserved: "All rights reserved.",
@@ -130,7 +131,7 @@ export const translations: Record<Locale, Translations> = {
     officeHours: "Office Hours",
     sendMessage: "Send us a Message",
     fullName: "Full Name",
-    emailAddress: "Email Address",
+    emailAddress: "Email",
     phoneNumber: "Phone Number",
     subject: "Subject",
     message: "Message",
@@ -151,10 +152,13 @@ export const translations: Record<Locale, Translations> = {
     bookAppointment: "احجز موعد",
 
     // Hero Section
-    heroTitle: "لوريم إيبسوم",
-    heroDescription:
+    heroTitle1: "لوريم إيبسوم",
+    heroTitle2: "عنوان الصناعة  ",
+    heroDescription1:
       "لوريم إيبسوم هو ببساطة نص وهمي من صناعة الطباعة والتنضيد. لقد كان لوريم إيبسوم النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر",
     readMore: "اقرأ المزيد",
+    heroDescription2:
+      "  . يتراوح عملاؤنا من المستثمرين الأفراد إلى الشركات المحلية والدولية وكذلك",
 
     // Team Section
     ourTeam: "فريقنا",
@@ -167,13 +171,10 @@ export const translations: Record<Locale, Translations> = {
       "يتراوح عملاؤنا من المستثمرين الأفراد إلى الشركات المحلية والدولية وكذلك شركات فورتشن 500. يتراوح عملاؤنا من المستثمرين الأفراد إلى الشركات المحلية والدولية وكذلك شركات فورتشن 500.",
 
     // Footer
-    quickLinks: "روابط سريعة",
     ourStrategy: "استراتيجيتنا",
     ourAdvantages: "مزايانا",
     socialResponsibility: "المسؤولية الاجتماعية",
     ourServices: "خدماتنا",
-    newsletter: "النشرة الإخبارية",
-    newsletterDescription: "اشترك للحصول على تحديثات حول الرؤى القانونية وأخبار الشركة.",
     subscribe: "اشترك",
     subscribed: "تم الاشتراك!",
     allRightsReserved: "جميع الحقوق محفوظة.",
@@ -209,8 +210,11 @@ export const translations: Record<Locale, Translations> = {
     // Search
     searchPlaceholder: "البحث في الخدمات وأعضاء الفريق...",
   },
-}
+};
 
-export function getTranslation(locale: Locale, key: keyof Translations): string {
-  return translations[locale][key] || translations[defaultLocale][key]
+export function getTranslation(
+  locale: Locale,
+  key: keyof Translations
+): string {
+  return translations[locale][key] || translations[defaultLocale][key];
 }
