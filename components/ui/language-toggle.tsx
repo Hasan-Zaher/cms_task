@@ -13,9 +13,9 @@ export function LanguageToggle() {
       {/* Trigger */}
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-2 rounded-md bg-amber-900 px-3 py-2 text-sm font-medium text-white hover:bg-amber-800 focus:outline-none"
+        className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white   focus:outline-none"
       >
-        🌐 {locale.toUpperCase()}
+         {locale.toUpperCase()}
         <svg
           className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
           fill="none"
@@ -31,16 +31,16 @@ export function LanguageToggle() {
         </svg>
       </button>
 
-      {/* Menu */}
+      {/* Menu  bg-amber-900*/}
       {open && (
-        <div className="absolute right-0 mt-2 w-40 rounded-md bg-amber-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-          <div className="py-1">
+        <div className="absolute right-0 mt-2 w-40 rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+          <div className="  ">
             <button
               onClick={() => {
                 dispatch(setLocale("en"));
                 setOpen(false);
               }}
-              className="flex w-full items-center px-4 py-2 text-sm text-white hover:bg-amber-800"
+              className="flex w-full items-center px-4 py-2  rounded-t-md   text-sm text-white hover:bg-amber-800"
             >
               <span className="mr-2">🇺🇸</span> English
             </button>
@@ -49,7 +49,7 @@ export function LanguageToggle() {
                 dispatch(setLocale("ar"));
                 setOpen(false);
               }}
-              className="flex w-full items-center px-4 py-2 text-sm text-white hover:bg-amber-800"
+              className="flex w-full items-center px-4 py-2 text-sm  rounded-b-md   text-white hover:bg-amber-800"
             >
               <span className="mr-2">🇸🇦</span> العربية
             </button>

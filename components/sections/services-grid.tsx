@@ -36,6 +36,13 @@ const services = [
     category: "Documentation",
   },
   {
+    id: "allCases",
+    title: ".....and Defense in All Cases",
+    description: "Professional notarization services for legal documents, ensuring authenticity and legal compliance.",
+    icon: Stamp,
+    category: "Documentation",
+  },
+  {
     id: "insurance",
     title: "Insurance",
     description: "Legal guidance on insurance matters, claims processing, and policy interpretation.",

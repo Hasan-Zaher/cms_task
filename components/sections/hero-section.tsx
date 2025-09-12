@@ -31,7 +31,7 @@ const heroSlides = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
- const isRTL = useAppSelector((state) => state.language.isRTL);
+  const isRTL = useAppSelector((state) => state.language.isRTL);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -113,7 +113,7 @@ export function HeroSection() {
       <div
         className={`absolute ${
           isRTL ? "right-8" : "left-8"
-        } top-1/2 transform -translate-y-1/2 z-20`}
+        } top-4/6 transform -translate-y-1/2 z-20`}
       >
         <div className="flex flex-col space-y-3">
           {heroSlides.map((_, index) => (

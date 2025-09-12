@@ -43,6 +43,7 @@ export interface Translations {
   foreignInvestment: string
   contracts: string
   notarization: string
+  allCases: string
   insurance: string
   banksFinancial: string
   corporateGovernance: string
@@ -113,6 +114,7 @@ export const translations: Record<Locale, Translations> = {
     foreignInvestment: "Foreign Investment Services",
     contracts: "Contracts",
     notarization: "Notarization",
+    allCases: ".....and Defense in All Cases",
     insurance: "Insurance",
     banksFinancial: "Banks and Financial Institutions",
     corporateGovernance: "Corporate Governance Services",
@@ -181,6 +183,7 @@ export const translations: Record<Locale, Translations> = {
     foreignInvestment: "خدمات الاستثمار الأجنبي",
     contracts: "العقود",
     notarization: "التوثيق",
+    allCases: ".....والدفاع في جميع القضايا",
     insurance: "التأمين",
     banksFinancial: "البنوك والمؤسسات المالية",
     corporateGovernance: "خدمات الحوكمة المؤسسية",

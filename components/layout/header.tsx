@@ -25,8 +25,13 @@ export function Header() {
     { key: "legalConsultation", slug: "legal-consultation-services" },
     { key: "foreignInvestment", slug: "foreign-investment-services" },
     { key: "contracts", slug: "contracts" },
+    { key: "legalConsultation", slug: "legal-consultation-services" },
+    { key: "foreignInvestment", slug: "foreign-investment-services" },
     { key: "notarization", slug: "notarization" },
     { key: "insurance", slug: "insurance" },
+    { key: "allCases", slug: "allCases" },
+    { key: "legalConsultation", slug: "legal-consultation-services" },
+    { key: "foreignInvestment", slug: "foreign-investment-services" },
     { key: "banksFinancial", slug: "banks-and-financial-institutions" },
     { key: "corporateGovernance", slug: "corporate-governance-services" },
     { key: "companiesLiquidation", slug: "companies-liquidation" },
@@ -48,7 +53,7 @@ export function Header() {
               isRTL ? "space-x-reverse" : ""
             }`}
           >
-            <span className="font-bold text-lg">Law Firm</span>
+            <span className="font-bold text-lg mx-[16px]">Law Firm</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -77,11 +82,19 @@ export function Header() {
                 <span>{t("services")}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-amber-900 border-amber-800 text-white min-w-[300px]">
+              <DropdownMenuContent
+                className="bg-amber-900 border-amber-800  mx-[5vw] text-white min-w-[90vw] "
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: "1.2rem",
+                  padding: "1rem",
+                }}
+              >
                 {services.map((service) => (
                   <DropdownMenuItem
                     key={service.key}
-                    className="hover:bg-amber-800 focus:bg-amber-800"
+                    className="hover:bg-amber-800 focus:bg-amber-800  "
                   >
                     <Link href={`/services/${service.slug}`}>
                       {t(service.key as keyof typeof t)}
@@ -125,11 +138,10 @@ export function Header() {
             {/* Search */}
             <Button
               variant="ghost"
-              size="sm"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="text-white hover:bg-amber-800"
+              className="text-white hover:bg-amber-800   "
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-14 h-14" />
             </Button>
 
             {/* Book Appointment */}
@@ -171,7 +183,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-4 bg-red-300">
             <nav className="flex flex-col space-y-2">
               <Link href="/" className="py-2 hover:text-amber-200">
                 {t("home")}
