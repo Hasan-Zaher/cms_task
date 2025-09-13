@@ -13,6 +13,7 @@ import { useTeamMembers } from "@/hooks/use-strapi-data";
 import { useTranslation } from "@/hooks/use-translation";
 import { useAppSelector } from "@/store/hooks";
 import Image from "next/image";
+import Link from "next/link";
 
 export function TeamSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,72 +99,78 @@ export function TeamSection() {
                 key={member.id}
                 className="bg-white   shadow-lg overflow-hidden group hover:shadow-xl transition-shadow"
               >
-                <div className=" overflow-hidden">
-                  <Image
-                    src={
-                      member.image ||
-                      "/placeholder.svg?height=400&width=400&query=professional headshot"
-                    }
-                    width={100}
-                    height={100}
-                    alt={member.name}
-                    className="w-full h-[260px] bg-brown  object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl  text-brown font-semibold  mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm  font-semibold  text-[#15143966] mb-4 tracking-wide uppercase ">
-                    {member.position}
-                  </p>
-                  <div
-                    className={`flex justify-center space-x-3 ${
-                      isRTL ? "space-x-reverse" : ""
-                    }`}
-                  >
-                    {member.social.email && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="w-8 h-8 p-0 hover:bg-red-50 hover:text-red-600"
-                        asChild
-                      >
-                        <a
-                          href={member.social.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <MessageCircle className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
-                    {member.social.phone && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="w-8 h-8 p-0 hover:bg-green-50 hover:text-green-600"
-                        asChild
-                      >
-                        <a href={`tel:${member.social.phone}`}>
-                          <Phone className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
-                    {member.social.linkedin && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="w-8 h-8 p-0 hover:bg-blue-50 hover:text-blue-600"
-                        asChild
-                      >
-                        <a href={`mailto:${member.social.email}`}>
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
+                <Link
+                  href={`/team-services/${member.slug}`}
+                  className="block cursor-pointer"
+                >
+                  {" "}
+                  <div className=" overflow-hidden">
+                    <Image
+                      src={
+                        member.image ||
+                        "/placeholder.svg?height=400&width=400&query=professional headshot"
+                      }
+                      width={100}
+                      height={100}
+                      alt={member.name}
+                      className="w-full h-[260px] bg-brown  object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl  text-brown font-semibold  mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm  font-semibold  text-[#15143966] mb-4 tracking-wide uppercase ">
+                      {member.position}
+                    </p>
+                    <div
+                      className={`flex justify-center space-x-3 ${
+                        isRTL ? "space-x-reverse" : ""
+                      }`}
+                    >
+                      {member.social.email && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="w-8 h-8 p-0 hover:bg-red-50 hover:text-red-600"
+                          asChild
+                        >
+                          <a
+                            href={member.social.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {member.social.phone && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="w-8 h-8 p-0 hover:bg-green-50 hover:text-green-600"
+                          asChild
+                        >
+                          <a href={`tel:${member.social.phone}`}>
+                            <Phone className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {member.social.linkedin && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="w-8 h-8 p-0 hover:bg-blue-50 hover:text-blue-600"
+                          asChild
+                        >
+                          <a href={`mailto:${member.social.email}`}>
+                            <Mail className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

@@ -68,6 +68,12 @@ export interface Translations {
 
   // Search
   searchPlaceholder: string;
+  Back: string;
+  loadingService: string;
+  loadingTeamService: string;
+  teamServiceNotFound: string;
+  Team: string;
+  servicesTeam: string;
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -140,6 +146,12 @@ export const translations: Record<Locale, Translations> = {
 
     // Search
     searchPlaceholder: "Search services, team members...",
+    Back: "Back",
+    loadingService: "Loading service…",
+    loadingTeamService: "Loading team service…",
+    teamServiceNotFound: "team Service not found",
+    Team: "Team",
+    servicesTeam: "Services",
   },
   ar: {
     // Navigation
@@ -209,6 +221,12 @@ export const translations: Record<Locale, Translations> = {
 
     // Search
     searchPlaceholder: "البحث في الخدمات وأعضاء الفريق...",
+    Back: "عودة",
+    loadingService: "جارٍ تحميل الخدمة…",
+    loadingTeamService: "جاري تحميل خدمة الفريق…",
+    teamServiceNotFound: "لم يتم العثور على خدمة الفريق",
+    Team: "فريق",
+    servicesTeam: "خدمات",
   },
 };
 

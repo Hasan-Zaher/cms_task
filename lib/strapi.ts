@@ -61,11 +61,13 @@ class StrapiAPI {
   // Team Members
   async getTeamMembers(): Promise<TeamMember[]> {
     const response = await this.request<StrapiResponse<StrapiItem[]>>(
-      "/team-members?populate=*"
+      "/team-members?populate[services][populate]=*"
     );
+
     return response.data.map((item) => ({
       id: item.id,
       name: item.attributes.name,
+      slug: item.attributes.slug,
       position: item.attributes.position,
       image: item.attributes.image?.data?.attributes?.url || null,
       bio: item.attributes.bio || "",
@@ -74,11 +76,18 @@ class StrapiAPI {
         phone: item.attributes.phone || "",
         linkedin: item.attributes.linkedin || "",
       },
+      services:
+        item.attributes.services?.data?.map((service: any) => ({
+          id: service.id,
+          title: service.attributes.title || { en: "", ar: "" },
+          description: service.attributes.description || { en: "", ar: "" },
+          slug: service.attributes.slug || "",
+        })) || [],
     }));
   }
 
   // Services
-  async getServices(): Promise<Service[]> {
+  async getServices(locale: string = "en"): Promise<Service[]> {
     const response = await this.request<StrapiResponse<StrapiItem[]>>(
       "/services?populate=*"
     );
@@ -86,9 +95,9 @@ class StrapiAPI {
       id: item.id,
       title: item.attributes.title,
       description: item.attributes.description,
-      content: item.attributes.content || "",
+      content: item.attributes.content || [],
       slug: item.attributes.slug,
-      category: item.attributes.category || "General",
+      category: item.attributes.category || { en: "General", ar: "عام" },
       icon: item.attributes.icon || "Scale",
     }));
   }
@@ -105,9 +114,9 @@ class StrapiAPI {
         id: item.id,
         title: item.attributes.title,
         description: item.attributes.description,
-        content: item.attributes.content || "",
+        content: item.attributes.content || [],
         slug: item.attributes.slug,
-        category: item.attributes.category || "General",
+        category: item.attributes.category || { en: "General", ar: "عام" },
         icon: item.attributes.icon || "Scale",
       };
     } catch (error) {
@@ -116,23 +125,7 @@ class StrapiAPI {
     }
   }
 
-  // Blog Posts
-  async getBlogPosts(): Promise<BlogPost[]> {
-    const response = await this.request<StrapiResponse<StrapiItem[]>>(
-      "/blog-posts?populate=*&sort=createdAt:desc"
-    );
-    return response.data.map((item) => ({
-      id: item.id,
-      title: item.attributes.title,
-      excerpt: item.attributes.excerpt,
-      content: item.attributes.content,
-      slug: item.attributes.slug,
-      publishedAt: item.attributes.publishedAt,
-      featuredImage:
-        item.attributes.featuredImage?.data?.attributes?.url || null,
-      author: item.attributes.author || "Law Firm",
-    }));
-  }
+  
 
   // Testimonials
   async getTestimonials(): Promise<Testimonial[]> {
@@ -239,10 +232,24 @@ class StrapiAPI {
 export const strapiAPI = new StrapiAPI();
 
 // Type definitions
+export interface TeamMemberService {
+  id: number;
+  title: {
+    en: string;
+    ar: string;
+  };
+  description: {
+    en: string;
+    ar: string;
+  };
+  slug: string;
+}
+
 export interface TeamMember {
   id: number;
   name: string;
   position: string;
+  slug: string;
   image: string | null;
   bio: string;
   social: {
@@ -250,29 +257,44 @@ export interface TeamMember {
     phone: string;
     linkedin: string;
   };
+  services: TeamMemberService[];
 }
 
 export interface Service {
   id: number;
-  title: string;
-  description: string;
-  content: string;
+  title: {
+    en: string;
+    ar: string;
+  };
+  description: {
+    en: string;
+    ar: string;
+  };
+  content: ServiceContent[];
   slug: string;
-  category: string;
+  category: {
+    en: string;
+    ar: string;
+  };
   icon: string;
 }
 
-export interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  slug: string;
-  publishedAt: string;
-  featuredImage: string | null;
-  author: string;
+export interface ServiceContent {
+  type: "item" | "subData";
+  title?: {
+    en: string;
+    ar: string;
+  };
+  text?: {
+    en: string;
+    ar: string;
+  };
+  list?: {
+    en: string[];
+    ar: string[];
+  };
 }
-
+ 
 export interface Testimonial {
   id: number;
   name: string;

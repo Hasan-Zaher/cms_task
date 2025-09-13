@@ -34,19 +34,19 @@ export function Header() {
 
   const services = [
     { key: "legalConsultation", slug: "legal-consultation-services" },
-    { key: "foreignInvestment", slug: "foreign-investment-services" },
-    { key: "contracts", slug: "contracts" },
+    { key: "foreignInvestment", slug: "foreign-investment-services " },
+    { key: "contracts", slug: "legal-consultation-services" },
     { key: "legalConsultation", slug: "legal-consultation-services" },
     { key: "foreignInvestment", slug: "foreign-investment-services" },
-    { key: "notarization", slug: "notarization" },
-    { key: "insurance", slug: "insurance" },
-    { key: "allCases", slug: "allCases" },
+    { key: "notarization", slug: "legal-consultation-services" },
+    { key: "insurance", slug: "foreign-investment-services" },
+    { key: "allCases", slug: "legal-consultation-services" },
     { key: "legalConsultation", slug: "legal-consultation-services" },
     { key: "foreignInvestment", slug: "foreign-investment-services" },
-    { key: "banksFinancial", slug: "banks-and-financial-institutions" },
-    { key: "corporateGovernance", slug: "corporate-governance-services" },
-    { key: "companiesLiquidation", slug: "companies-liquidation" },
-    { key: "internalRegulations", slug: "internal-regulations-for-companies" },
+    { key: "banksFinancial", slug: "legal-consultation-services" },
+    { key: "corporateGovernance", slug: "foreign-investment-services" },
+    { key: "companiesLiquidation", slug: "legal-consultation-services" },
+    { key: "internalRegulations", slug: "foreign-investment-services" },
   ];
 
   return (
@@ -71,10 +71,7 @@ export function Header() {
             <Link href="/" className=" hover:text-mainHover transition-colors">
               {t("home")}
             </Link>
-            <Link
-              href="/about"
-              className=" hover:text-mainHover transition-colors"
-            >
+            <Link href="/" className=" hover:text-mainHover transition-colors">
               {t("about")}
             </Link>
 
@@ -110,10 +107,7 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link
-              href="/blog"
-              className=" hover:text-mainHover transition-colors"
-            >
+            <Link href="/ " className=" hover:text-mainHover transition-colors">
               {t("blog")}
             </Link>
             <Link
@@ -122,10 +116,7 @@ export function Header() {
             >
               {t("team")}
             </Link>
-            <Link
-              href="/contact"
-              className=" hover:text-mainHover transition-colors"
-            >
+            <Link href="/ " className=" hover:text-mainHover transition-colors">
               {t("contact")}
             </Link>
           </nav>
@@ -194,19 +185,19 @@ export function Header() {
               <Link href="/" className="py-2 hover:text-amber-200">
                 {t("home")}
               </Link>
-              <Link href="/about" className="py-2 hover:text-amber-200">
+              <Link href="/ " className="py-2 hover:text-amber-200">
                 {t("about")}
               </Link>
               <Link href="/services" className="py-2 hover:text-amber-200">
                 {t("services")}
               </Link>
-              <Link href="/blog" className="py-2 hover:text-amber-200">
+              <Link href="/ " className="py-2 hover:text-amber-200">
                 {t("blog")}
               </Link>
               <Link href="/team" className="py-2 hover:text-amber-200">
                 {t("team")}
               </Link>
-              <Link href="/contact" className="py-2 hover:text-amber-200">
+              <Link href="/ " className="py-2 hover:text-amber-200">
                 {t("contact")}
               </Link>
               <div className="py-2">
