@@ -4,11 +4,13 @@ import { ServicesBreadcrumb } from "@/components/ui/services-breadcrumb"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { StaticHero } from "@/components/layout/staticHero"
 
 export default function LegalConsultationServicesPage() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
+      <StaticHero/>
       <div className="container mx-auto px-4 py-8">
         <ServicesBreadcrumb currentPage="Legal Consultation Services" />
 
