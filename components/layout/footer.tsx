@@ -60,11 +60,16 @@ export function Footer() {
 
   return (
     <footer className="bg-brown text-white mt-2  md:mt-8 py-5">
-      <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row items-center justify-between">
+      <div
+        className={`container mx-auto px-4 py-8 flex flex-col  lg:flex-row items-center justify-between 
+         `}
+      >
         <div />
 
         {/* Newsletter & Social */}
-        <div className="flex  flex-row items-center flex-wrap   gap-10 w-full lg:w-auto">
+        <div
+          className={`flex  flex-row items-center flex-wrap   gap-10 w-full lg:w-auto `}
+        >
           <form
             onSubmit={handleSubscribe}
             className="w-full lg:w-auto relative max-w-[320px]"

@@ -74,9 +74,7 @@ export function HeroSection() {
         dir={isRTL ? "ltr" : ""}
       >
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full ${
-            isRTL ? "text-right   " : "text-left"
-          }`}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full text-left  `}
         >
           {/* Left Content */}
           <div className={`text-white space-y-6 ${isRTL ? "lg:order-2" : ""}`}>
