@@ -15,12 +15,13 @@ import { useTranslation } from "@/hooks/use-translation";
 
 import { useAppSelector } from "@/store/hooks";
 
+import { useServices, useTeamMembers } from "@/hooks/use-strapi-data";
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { t } = useTranslation();
   const isRTL = useAppSelector((state) => state.language.isRTL);
-
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -32,22 +33,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    { key: "legalConsultation", slug: "legal-consultation-services" },
-    { key: "foreignInvestment", slug: "foreign-investment-services " },
-    { key: "contracts", slug: "legal-consultation-services" },
-    { key: "legalConsultation", slug: "legal-consultation-services" },
-    { key: "foreignInvestment", slug: "foreign-investment-services" },
-    { key: "notarization", slug: "legal-consultation-services" },
-    { key: "insurance", slug: "foreign-investment-services" },
-    { key: "allCases", slug: "legal-consultation-services" },
-    { key: "legalConsultation", slug: "legal-consultation-services" },
-    { key: "foreignInvestment", slug: "foreign-investment-services" },
-    { key: "banksFinancial", slug: "legal-consultation-services" },
-    { key: "corporateGovernance", slug: "foreign-investment-services" },
-    { key: "companiesLiquidation", slug: "legal-consultation-services" },
-    { key: "internalRegulations", slug: "foreign-investment-services" },
-  ];
+  const { services } = useServices();
 
   return (
     <header
@@ -96,11 +82,11 @@ export function Header() {
               >
                 {services.map((service) => (
                   <DropdownMenuItem
-                    key={service.key}
+                    key={service.id}
                     className="hover:bg-brown focus:bg-brown "
                   >
                     <Link href={`/services/${service.slug}`}>
-                      {t(service.key as keyof typeof t)}
+                      {isRTL ? service.title.ar : service.title.en}
                     </Link>
                   </DropdownMenuItem>
                 ))}

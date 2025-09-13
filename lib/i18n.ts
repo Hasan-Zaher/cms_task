@@ -74,6 +74,11 @@ export interface Translations {
   teamServiceNotFound: string;
   Team: string;
   servicesTeam: string;
+  loading: string;
+  subscribeSuccess: string;
+  subscribeError: string;
+  invalidEmail: string;
+  emailRequired: string;
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -152,6 +157,11 @@ export const translations: Record<Locale, Translations> = {
     teamServiceNotFound: "team Service not found",
     Team: "Team",
     servicesTeam: "Services",
+    loading: "Loading",
+    subscribeSuccess: "Successfully subscribed",
+    subscribeError: "Failed to subscribe. Please try again",
+    invalidEmail: "Please enter a valid email address",
+    emailRequired: "Email is required",
   },
   ar: {
     // Navigation
@@ -227,6 +237,11 @@ export const translations: Record<Locale, Translations> = {
     teamServiceNotFound: "لم يتم العثور على خدمة الفريق",
     Team: "فريق",
     servicesTeam: "خدمات",
+    loading: "يتم التحميل",
+    subscribeSuccess: "تم الاشتراك بنجاح",
+    subscribeError: "فشل الاشتراك. يُرجى المحاولة مرة أخرى.",
+    invalidEmail: "يرجى إدخال عنوان بريد إلكتروني صالح",
+    emailRequired: "البريد الإلكتروني مطلوب",
   },
 };
 

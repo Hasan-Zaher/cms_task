@@ -311,6 +311,916 @@ export const fallbackServices: Service[] = [
       },
     ],
   },
+  {
+    id: 3,
+    title: {
+      en: "contracts",
+      ar: "العقود    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: {
+      en: "notarization",
+      ar: "التوثيق    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: {
+      en: "insurance",
+      ar: "تأمين    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: {
+      en: "allCases",
+      ar: "جميع الحالات    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: {
+      en: "Legal Consultation Services",
+      ar: "خدمات الاستشارات القانونية",
+    },
+    description: {
+      en: "Law Firm is one of the leading legal offices that offer exceptional advisory services for both individuals and companies.",
+      ar: "مكتب المحاماة هو أحد المكاتب القانونية الرائدة التي تقدم خدمات استشارية استثنائية لكل من الأفراد والشركات.",
+    },
+    slug: "legal-consultation-services",
+    category: {
+      en: "Consultation",
+      ar: "استشارة",
+    },
+    icon: "Scale",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "General Legal Consultations",
+          ar: "استشارات قانونية عامة",
+        },
+        text: {
+          en: "At Law Firm, we provide comprehensive legal consultations covering all legal aspects that our clients may encounter in their daily lives or business activities. Our goal is to offer accurate legal advice based on a deep understanding of local and international laws. Our advisory services about:",
+          ar: "في مكتب المحاماة، نقدم استشارات قانونية شاملة تغطي جميع الجوانب القانونية التي قد يواجهها عملاؤنا في حياتهم اليومية أو أنشطتهم التجارية. هدفنا هو تقديم مشورة قانونية دقيقة بناءً على فهم عميق للقوانين المحلية والدولية. خدماتنا الاستشارية حول:",
+        },
+        list: {
+          en: [
+            "Establishing and registering companies.",
+            "All kinds of contracts and agreements.",
+            "Commercial disputes",
+            "Compliance with local and international laws and regulations.",
+          ],
+          ar: [
+            "إنشاء وتسجيل الشركات.",
+            "جميع أنواع العقود والاتفاقيات.",
+            "النزاعات التجارية",
+            "الامتثال للقوانين واللوائح المحلية والدولية.",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Individual Legal Consultations",
+          ar: "استشارات قانونية للأفراد",
+        },
+        text: {
+          en: "Law Firm offers customized advisory services for individuals, including:",
+          ar: "يقدم مكتب المحاماة خدمات استشارية مخصصة للأفراد، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Family issues such as divorce, alimony, and custody",
+            "Real estate matters like buying, selling, and renting properties",
+            "Employment issues such as hiring and wrongful termination",
+          ],
+          ar: [
+            "القضايا الأسرية مثل الطلاق والنفقة والحضانة",
+            "المسائل العقارية مثل شراء وبيع وتأجير العقارات",
+            "قضايا العمل مثل التوظيف والفصل غير المشروع",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "At Law Firm, we aim to provide the best legal services to ensure your rights and offer effective legal solutions. Contact us today to receive professional and comprehensive legal consultation.",
+          ar: "في مكتب المحاماة، نهدف إلى تقديم أفضل الخدمات القانونية لضمان حقوقك وتقديم حلول قانونية فعالة. اتصل بنا اليوم للحصول على استشارة قانونية مهنية وشاملة.",
+        },
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: {
+      en: "Foreign Investment Services",
+      ar: "خدمات الاستثمار الأجنبي",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: {
+      en: "contracts",
+      ar: "العقود    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: {
+      en: "internalRegulations",
+      ar: "اللائحة الداخلية    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: {
+      en: "insurance",
+      ar: "تأمين    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: {
+      en: "insurance",
+      ar: "تأمين    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 13,
+    title: {
+      en: "notarization",
+      ar: "التوثيق    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: {
+      en: "allCases",
+      ar: "جميع الحالات    ",
+    },
+    description: {
+      en: "Comprehensive support for foreign investors looking to establish businesses and navigate local regulations.",
+      ar: "دعم شامل للمستثمرين الأجانب الراغبين في إنشاء businesses والتنقل في اللوائح المحلية.",
+    },
+    slug: "foreign-investment-services",
+    category: {
+      en: "Investment",
+      ar: "استثمار",
+    },
+    icon: "Building2",
+    content: [
+      {
+        type: "item",
+        title: {
+          en: "Business Establishment Services",
+          ar: "خدمات إنشاء الأعمال",
+        },
+        text: {
+          en: "We provide end-to-end support for foreign investors looking to establish their presence in the region, including:",
+          ar: "نقدم دعماً شاملاً للمستثمرين الأجانب الراغبين في إنشاء وجودهم في المنطقة، بما في ذلك:",
+        },
+        list: {
+          en: [
+            "Company registration and licensing",
+            "Legal structure advisory",
+            "Foreign ownership regulations compliance",
+            "Local partnership facilitation",
+          ],
+          ar: [
+            "تسجيل الشركات والترخيص",
+            "استشارات الهيكل القانوني",
+            "الامتثال لأنظمة الملكية الأجنبية",
+            "تسهيل الشراكات المحلية",
+          ],
+        },
+      },
+      {
+        type: "item",
+        title: {
+          en: "Regulatory Compliance",
+          ar: "الامتثال التنظيمي",
+        },
+        text: {
+          en: "Our team ensures your business operations remain compliant with all local regulations:",
+          ar: "يضمن فريقنا بقاء عملياتك التجارية متوافقة مع جميع اللوائح المحلية:",
+        },
+        list: {
+          en: [
+            "Regular compliance audits",
+            "Labor law compliance",
+            "Tax regulation advisory",
+            "Industry-specific regulation guidance",
+          ],
+          ar: [
+            "مراجعات الامتثال الدورية",
+            "الامتثال لقوانين العمل",
+            "استشارات اللوائح الضريبية",
+            "توجيهات اللوائح الخاصة بالصناعة",
+          ],
+        },
+      },
+      {
+        type: "subData",
+        text: {
+          en: "Our foreign investment services are designed to provide a seamless entry into the market while ensuring full compliance with all legal requirements. Contact us to discuss your investment plans.",
+          ar: "تم تصميم خدمات الاستثمار الأجنبي لدينا لتوفير دخول سلس إلى السوق مع ضمان الامتثال الكامل لجميع المتطلبات القانونية. اتصل بنا لمناقشة خطط استثمارك.",
+        },
+      },
+    ],
+  },
 ];
 
 export const fallbackTestimonials: Testimonial[] = [
