@@ -63,11 +63,7 @@ export function ClientsSection() {
         </div>
 
         {/* Testimonial */}
-        <div
-          className={`flex flex-col lg:flex-row items-center ${
-            isRTL ? "lg:flex-row-reverse" : ""
-          }`}
-        >
+        <div className={`flex flex-col lg:flex-row items-center `}>
           {/* Image */}
           <div
             className={`flex justify-center ${
@@ -90,7 +86,7 @@ export function ClientsSection() {
 
           {/* Content */}
           <div
-            className={` space-y-6 px-6 ${isRTL ? "text-right" : "text-left"}`}
+            className={` space-y-6 px-6 `}
           >
             <blockquote className="text-lg md:text-xl leading-relaxed opacity-[0.6]">
               "
