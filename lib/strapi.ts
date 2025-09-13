@@ -125,8 +125,6 @@ class StrapiAPI {
     }
   }
 
-  
-
   // Testimonials
   async getTestimonials(): Promise<Testimonial[]> {
     const response = await this.request<StrapiResponse<StrapiItem[]>>(
@@ -213,16 +211,15 @@ class StrapiAPI {
   // Hero Slides
   async getHeroSlides(): Promise<HeroSlide[]> {
     const response = await this.request<StrapiResponse<StrapiItem[]>>(
-      "/hero-slides?populate=*&sort=order:asc"
+      "/hero-slides?populate=*"
     );
+
     return response.data.map((item) => ({
       id: item.id,
-      title: item.attributes.title,
-      description: item.attributes.description,
-      backgroundImage:
-        item.attributes.backgroundImage?.data?.attributes?.url || null,
+      title: item.attributes.title || { en: "", ar: "" },
+      description: item.attributes.description || { en: "", ar: "" },
       profileImage: item.attributes.profileImage?.data?.attributes?.url || null,
-      buttonText: item.attributes.buttonText || "Read More",
+      buttonText: item.attributes.buttonText || { en: "", ar: "" },
       buttonLink: item.attributes.buttonLink || "#",
       order: item.attributes.order || 0,
     }));
@@ -294,7 +291,7 @@ export interface ServiceContent {
     ar: string[];
   };
 }
- 
+
 export interface Testimonial {
   id: number;
   name: string;
@@ -319,11 +316,19 @@ export interface ContactFormData {
 
 export interface HeroSlide {
   id: number;
-  title: string;
-  description: string;
-  backgroundImage: string | null;
+  title: {
+    en: string;
+    ar: string;
+  };
+  description: {
+    en: string;
+    ar: string;
+  };
   profileImage: string | null;
-  buttonText: string;
+  buttonText: {
+    en: string;
+    ar: string;
+  };
   buttonLink: string;
   order: number;
 }
