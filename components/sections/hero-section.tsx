@@ -6,49 +6,41 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/hooks/use-translation";
 import { useAppSelector } from "@/store/hooks";
 import Image from "next/image";
-
-const heroSlides = [
-  {
-    id: 1,
-    titleKey: "heroTitle1",
-    descriptionKey: "heroDescription1",
-    backgroundImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
-    profileImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-E17mkYc9ZHJXzJtpN7BVkyApQWFr70.png",
-  },
-  {
-    id: 2,
-    titleKey: "heroTitle2",
-    descriptionKey: "heroDescription2",
-    backgroundImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
-    profileImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-E17mkYc9ZHJXzJtpN7BVkyApQWFr70.png",
-  },
-];
+import { useHeroSlides } from "@/hooks/use-strapi-data";
+import Link from "next/link";
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
   const isRTL = useAppSelector((state) => state.language.isRTL);
+  const locale = useAppSelector((state) => state.language.locale);
+
+  const { heroSlides, loading, error } = useHeroSlides();
 
   useEffect(() => {
+    if (heroSlides.length === 0) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroSlides]);
 
   const nextSlide = () => {
+    if (heroSlides.length === 0) return;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   };
 
   const prevSlide = () => {
+    if (heroSlides.length === 0) return;
     setCurrentSlide(
       (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
     );
   };
+
+  if (heroSlides.length === 0) {
+    return null;
+  }
 
   return (
     <section className="relative h-screen overflow-hidden">
@@ -70,25 +62,28 @@ export function HeroSection() {
 
       {/* Content */}
       <div
-        className="relative z-10   container mx-auto px-4 h-full flex items-center"
+        className="relative z-10 container mx-auto px-4 h-full flex items-center"
         dir={isRTL ? "ltr" : ""}
       >
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full text-left  `}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full text-left`}
         >
           {/* Left Content */}
           <div className={`text-white space-y-6 ${isRTL ? "lg:order-2" : ""}`}>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
-              {t(heroSlides[currentSlide].titleKey as keyof typeof t)}
+              {heroSlides[currentSlide].title[locale]}
             </h1>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed text-pretty">
-              {t(heroSlides[currentSlide].descriptionKey as keyof typeof t)}
+              {heroSlides[currentSlide].description[locale]}
             </p>
             <Button
               size="lg"
               className="bg-white text-amber-900 hover:bg-gray-100 font-semibold px-8 py-3"
+              asChild
             >
-              {t("readMore")}
+              <Link href={heroSlides[currentSlide].buttonLink}>
+                {heroSlides[currentSlide].buttonText[locale]}
+              </Link>
             </Button>
           </div>
 
@@ -100,11 +95,14 @@ export function HeroSection() {
           >
             <div className="relative">
               <Image
-                src="/images/personImage.png"
-                alt="person"
+                src={
+                  heroSlides[currentSlide].profileImage ||
+                  "/images/personImage.png"
+                }
+                alt="Hero profile"
                 width={320}
                 height={384}
-                className="object-cover bg-main   "
+                className="object-cover bg-main"
               />
             </div>
           </div>

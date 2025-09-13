@@ -1,11 +1,5 @@
 // Fallback data when Strapi is not available
-import type {
-  TeamMember,
-  Service,
-  Testimonial,
-  HeroSlide,
- 
-} from "./strapi";
+import type { TeamMember, Service, Testimonial, HeroSlide } from "./strapi";
 
 export const fallbackTeamMembers: TeamMember[] = [
   {
@@ -355,30 +349,38 @@ export const fallbackTestimonials: Testimonial[] = [
 export const fallbackHeroSlides: HeroSlide[] = [
   {
     id: 1,
-    title: "Professional Legal Services",
-    description:
-      "Comprehensive legal solutions with expertise and dedication to serve our clients' needs effectively",
-    backgroundImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
-    profileImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-E17mkYc9ZHJXzJtpN7BVkyApQWFr70.png",
-    buttonText: "Read More",
+    title: {
+      en: "Professional Legal Services",
+      ar: "خدمات قانونية محترفة",
+    },
+    description: {
+      en: "Comprehensive legal solutions with expertise and dedication to serve our clients' needs effectively",
+      ar: "حلول قانونية شاملة مع الخبرة والتفاني لخدمة احتياجات عملائنا بشكل فعال",
+    },
+    profileImage: "/images/personImage.png",
+    buttonText: {
+      en: "Read More",
+      ar: "اقرأ المزيد",
+    },
     buttonLink: "/about",
     order: 1,
   },
   {
     id: 2,
-    title: "Expert Legal Consultation",
-    description:
-      "Professional legal advice and consultation services for individuals and corporations across various legal domains",
-    backgroundImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W4lqJ3ormq8OpARlTjAauk9dAU9XgL.png",
-    profileImage:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-E17mkYc9ZHJXzJtpN7BVkyApQWFr70.png",
-    buttonText: "Learn More",
+    title: {
+      en: "Expert Legal Consultation",
+      ar: "استشارات قانونية متخصصة",
+    },
+    description: {
+      en: "Professional legal advice and consultation services for individuals and corporations across various legal domains",
+      ar: "نصائح واستشارات قانونية محترفة للأفراد والشركات عبر مختلف المجالات القانونية",
+    },
+    profileImage: "/images/productOne.jpg",
+    buttonText: {
+      en: "Learn More",
+      ar: "تعلم المزيد",
+    },
     buttonLink: "/services",
     order: 2,
   },
 ];
-
- 
