@@ -46,7 +46,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     name: "Sarah Johnson",
     slug: "sarah-team",
     position: "Associate Lawyer",
-    image: "/images/productOne.jpg",
+    image: "/images/productOne.webp",
     bio: "Specializes in international business law and foreign investment.",
     social: {
       email: "sarah@lawfirm.com",
@@ -124,7 +124,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     name: "Sarah Johnson",
     slug: "sarah-team",
     position: "Associate Lawyer",
-    image: "/images/productOne.jpg",
+    image: "/images/productOne.webp",
     bio: "Specializes in international business law and foreign investment.",
     social: {
       email: "sarah@lawfirm.com",
@@ -1251,7 +1251,7 @@ export const fallbackTestimonials: Testimonial[] = [
       "Exceptional legal services with professional expertise. The team provided comprehensive support throughout our corporate restructuring process.",
     testimonialAr:
       "خدمات قانونية استثنائية بخبرة احترافية. قدم الفريق دعمًا شاملاً طوال عملية إعادة هيكلة شركتنا.",
-    image: "/images/productFour.jpg",
+    image: "/images/productTwo.webp",
     rating: 5,
   },
 ];
@@ -1285,7 +1285,7 @@ export const fallbackHeroSlides: HeroSlide[] = [
       en: "Professional legal advice and consultation services for individuals and corporations across various legal domains",
       ar: "نصائح واستشارات قانونية محترفة للأفراد والشركات عبر مختلف المجالات القانونية",
     },
-    profileImage: "/images/productOne.jpg",
+    profileImage: "/images/productOne.webp",
     buttonText: {
       en: "Learn More",
       ar: "تعلم المزيد",

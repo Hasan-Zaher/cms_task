@@ -174,9 +174,35 @@ export function Header() {
               <Link href="/ " className="py-2 hover:text-amber-200">
                 {t("about")}
               </Link>
-              <Link href="/services" className="py-2 hover:text-amber-200">
-                {t("services")}
-              </Link>
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  className={`flex   items-center space-x-1  hover:text-mainHover transition-colors cursor-pointer ${
+                    isRTL ? "space-x-reverse" : ""
+                  }`}
+                >
+                  <span>{t("services")}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  className="bg-brown border-brown   bg-faint text-white   "
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, 1fr)",
+                    gap: "0.4rem",
+                  }}
+                >
+                  {services.map((service) => (
+                    <DropdownMenuItem
+                      key={service.id}
+                      className="hover:bg-brown focus:bg-brown "
+                    >
+                      <Link href={`/services/${service.slug}`}>
+                        {isRTL ? service.title.ar : service.title.en}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link href="/ " className="py-2 hover:text-amber-200">
                 {t("blog")}
               </Link>
