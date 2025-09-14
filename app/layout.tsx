@@ -29,9 +29,6 @@ function ClientLayout({ children }: { children: React.ReactNode }) {
       document.body.classList.remove("rtl");
     }
   }, [isRTL, locale]);
-  console.log("locale");
-  console.log(locale);
-  console.log("locale");
   return (
     <html lang={locale} dir={dir}>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
