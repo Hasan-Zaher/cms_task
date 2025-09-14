@@ -5,7 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import { Facebook, Twitter, Chrome } from "lucide-react";
 import { strapiAPI } from "@/lib/strapi";
 import { useTranslation } from "@/hooks/use-translation";
