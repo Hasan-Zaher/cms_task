@@ -100,9 +100,9 @@ export function HeroSection() {
                   "/images/personImage.png"
                 }
                 alt="Hero profile"
-                width={320}
-                height={384}
-                className="object-cover bg-main"
+                width={100}
+                height={100}
+                className="w-[340px] h-[340px] object-cover bg-main"
               />
             </div>
           </div>
@@ -133,7 +133,7 @@ export function HeroSection() {
         onClick={prevSlide}
         className={`absolute ${
           isRTL ? "right-4" : "left-4"
-        } top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors`}
+        } top-5/8  md:top-1/2  transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors`}
       >
         {isRTL ? (
           <ChevronRight className="w-6 h-6" />
@@ -145,7 +145,7 @@ export function HeroSection() {
         onClick={nextSlide}
         className={`absolute ${
           isRTL ? "left-4" : "right-4"
-        } top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors`}
+        } top-5/8  md:top-1/2  transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors`}
       >
         {isRTL ? (
           <ChevronLeft className="w-6 h-6" />
